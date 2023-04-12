@@ -1,0 +1,12 @@
+{
+  "name": "profanitywords-api",
+  "version": "1.0.0",
+  "description": "API for profanity words",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "José Cássio de Araújo Goes",
+  "license": "ISC"
+}
