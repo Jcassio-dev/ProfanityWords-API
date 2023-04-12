@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./src/server.js",
-    "start": "node ./src/server.js"
+    "start": "node ./src/server.js",
+    "migrate": "knex migrate:latest"
   },
   "keywords": [],
   "author": "José Cássio de Araújo Goes",
@@ -16,6 +17,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
+    "knex": "^2.4.2",
     "sqlite": "^4.1.2",
     "sqlite3": "^5.1.6"
   }
