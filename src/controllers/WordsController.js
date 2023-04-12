@@ -1,12 +1,21 @@
-class WordsController {
-    create(request, response){
-        const {text} = request.body;
+const knex = require('../database/knex');
+const AppError = require("../utils/AppError")
 
-        if(!text){
-            throw new AppError("");
+class WordsController {
+    async create(request, response){
+        const {title} = request.body;
+
+        const wordAlredyExists = await knex("words").where({title}).first();
+
+        if(wordAlredyExists){
+            throw new AppError("Palavrão já está incluso na lista");
         }
 
-        return response.status(201).json({text});
+        await knex("words").insert({
+            title
+        })
+
+        return response.status(201).json("Palavrão incluído");
     }
 }
 
