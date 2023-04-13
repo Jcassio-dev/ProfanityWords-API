@@ -23,7 +23,7 @@ class SugestionsController {
         
         const sugestions = await knex("sugestions").whereLike("title", `%${title}%`)
  
-        return response.json({sugestions});
+        return response.json(sugestions);
     }
 }
 
