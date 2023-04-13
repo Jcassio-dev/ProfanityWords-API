@@ -1,3 +1,4 @@
+const { request } = require('express');
 const knex = require('../database/knex');
 const AppError = require("../utils/AppError")
 
@@ -24,6 +25,12 @@ class SugestionsController {
         const sugestions = await knex("sugestions").whereLike("title", `%${title}%`).orderBy("title");
  
         return response.json(sugestions);
+    }
+
+    async delete(request, response){
+        const sugestions = await knex("sugestions").delete();
+
+        return response.json("Sugestões limpas")
     }
 }
 
