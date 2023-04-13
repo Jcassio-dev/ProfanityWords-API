@@ -6,5 +6,6 @@ const wordsRoutes = Router();
 const wordsController = new WordsController
 
 wordsRoutes.post('/', wordsController.create)
+wordsRoutes.get('/', wordsController.index)
 
 module.exports = wordsRoutes;
