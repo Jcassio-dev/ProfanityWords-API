@@ -75,13 +75,13 @@ API desenvolvida para o desafio do BitLab que consiste em criar um filtro de pal
 #### Clone esse repositório
 
 ```bash
-$ git clone https://github.com/bitlab-ufrn/selecao-2023-Jcassio-dev.git
+$ git clone https://github.com/Jcassio-dev/ProfanityWords-API.git
 ```
 
 #### Acesse a pasta do projeto no terminal/cmd
 
 ```bash
-$ cd /selecao-2023-Jcassio-dev.git
+$ cd /ProfanityWords-API
 ```
 
 #### Instale as dependências
