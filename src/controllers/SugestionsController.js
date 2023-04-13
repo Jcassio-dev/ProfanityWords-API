@@ -21,7 +21,7 @@ class SugestionsController {
     async index(request, response){
         const {title} = request.query;
         
-        const sugestions = await knex("sugestions").whereLike("title", `%${title}%`).orderBy("name");
+        const sugestions = await knex("sugestions").whereLike("title", `%${title}%`).orderBy("title");
  
         return response.json(sugestions);
     }

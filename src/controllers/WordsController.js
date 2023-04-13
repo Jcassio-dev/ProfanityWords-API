@@ -21,7 +21,7 @@ class WordsController {
     async index(request, response){
         const {title} = request.query;
         
-        const words = await knex("words").whereLike("title", `%${title}%`).orderBy("name");
+        const words = await knex("words").whereLike("title", `%${title}%`).orderBy("title");
  
         return response.json(words);
     }
