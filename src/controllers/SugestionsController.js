@@ -6,10 +6,14 @@ class SugestionsController {
     async create(request, response){
         const {title} = request.body;
 
-        const sugestionAlredyExists = await knex("sugestions").where({title}).first();
+        const sugestionAlredyExistsInSugestionsTable = await knex("sugestions").where({title}).first();
+        const sugestionAlredyExistsInWordsTable = await knex("words").where({title}).first();
 
-        if(sugestionAlredyExists){
-            throw new AppError("Palavrão já está incluso na lista");
+        if(sugestionAlredyExistsInSugestionsTable){
+            throw new AppError(`${title} já está inclusa na lista de sugestões.`);
+        }
+        if(sugestionAlredyExistsInWordsTable){
+            throw new AppError(`${title} já está inclusa na lista de palavrões.`);
         }
 
         await knex("sugestions").insert({
