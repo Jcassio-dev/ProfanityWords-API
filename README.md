@@ -8,11 +8,6 @@
 
  # API -  Detector de textos impróprios
 
-#### EndPoint:
-```bash
-https://profanitywords-api.onrender.com
-```
-
 #### Response Format:
 ```bash
 JSON
@@ -39,7 +34,9 @@ GET - EndPoint/sugestions - Retorna todas as palavras adicionadas na tabela suge
 ```bash
 POST - EndPoint/sugestions - Adiciona uma palavra na tabela sugestions - Só é necessário enviar o título: {title}
 ```
-
+```bash
+DELETE - EndPoint/sugestions - Remove todas as palavras da tabela sugestions - Não é necessário enviar nada
+```
 
 <div id="Description">
 
