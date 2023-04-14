@@ -8,11 +8,6 @@
 
  # API -  Detector de textos impróprios
 
-#### EndPoint:
-```bash
-https://profanitywords-api.onrender.com
-```
-
 #### Response Format:
 ```bash
 JSON
