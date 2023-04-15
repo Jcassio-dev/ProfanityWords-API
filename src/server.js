@@ -3,7 +3,7 @@ require("express-async-errors")
 const express = require("express");
 const cors = require("cors")
 
-const database = require('./database/sqlite/index')
+const database = require('./database/sqlite')
 const AppError = require("./utils/AppError");
 const routes = require("./routes");
 
